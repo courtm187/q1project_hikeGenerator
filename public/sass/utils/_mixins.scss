@@ -1,0 +1,9 @@
+@mixin divs($height, $width, $border) {
+
+  div {
+    height: $height;
+    width: $width;
+    border: $border;
+  }
+
+}

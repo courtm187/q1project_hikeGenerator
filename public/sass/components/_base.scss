@@ -1,0 +1,134 @@
+//using the $ sign makes reusable variables
+$blue: rgb(135, 206, 238);
+$dblue: rgb(0, 163, 204);
+$dred: rgb(210, 40, 39);
+$lred: rgb(223, 91, 80);
+$gr1: rgb(51, 204, 51);
+$gr3: rgb(128, 255, 128);
+$gr2: rgb(112, 219, 112);
+$gr4: rgb(0, 128, 0);
+$gr5: rgb(41, 163, 41);
+
+
+body {
+  background-color: white;
+
+}
+
+//@include divs(200px, 200px, 1px solid green);
+//what is this
+// calling a mixin - whatever styling pass these parameters and apply styles
+
+%standardStyle {
+  border-radius: 25px;
+  padding: 12px;
+  margin: 10px;
+  display: flex;
+
+}
+
+.container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+header {
+  @extend %standardStyle;
+  flex-direction: column;
+  display: inline;
+  background-color: $blue;
+  border: 5px solid $dblue;
+  justify-content: center;
+  width: 70%;
+}
+h1{
+//  float: left;
+  margin-left: 50px;
+  justify-content: center;
+}
+.headClass{
+  display: inline-block;
+  //float: right;
+  justify-content: center;
+  margin-right: 10px;
+  margin-top: 10px;
+}
+      .head2{
+      display: block;
+      justify-content: center;
+      font-size: 28px;
+      text-align: center;
+
+      }
+
+      .head3{
+      display: block;
+      justify-content: center;
+      font-size: 20px;
+      text-align: center;
+      }
+
+.content{
+  @extend %standardStyle;
+  width: 70%;
+}
+    .selectBox{
+      @extend %standardStyle;
+      background-color: $lred;
+      border: 5px solid $dred;
+      flex-grow: 2;
+    }
+
+    .imageDiv{
+      @extend %standardStyle;
+      background-color: $gr2;
+      border: 5px solid $gr5;
+      flex-grow: 2;
+      display: block;
+      margin-left: auto;
+      margin-top: auto;
+      justify-content: center;
+      max-width: 450px;
+      margin-left:50px;
+
+      aside {
+        display: block;
+        text-align: center;
+        justify-content: center;
+      }
+    }
+
+footer {
+
+
+}
+
+img {
+  width: 400px;
+  height: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  float: center;
+  text-align: center;
+  justify-content: center;
+}
+
+
+// div {
+//
+//  a {
+//    color: red;
+//
+//   &:hover {
+//     color: yellow;
+//   }
+//
+//   &:active {
+//     color: purple;
+//   }
+//
+//  }
+//
+// }
