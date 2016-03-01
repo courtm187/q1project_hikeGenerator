@@ -10,7 +10,8 @@ header, .content, .selectBox, .imageDiv {
 .container {
   display: flex;
   flex-direction: column;
-  justify-content: center; }
+  justify-content: center;
+  margin: 0px auto; }
 
 header {
   flex-direction: column;
