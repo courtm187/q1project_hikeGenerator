@@ -3,38 +3,95 @@
   <head>
     <meta charset="utf-8">
     <title></title>
-    <link rel="stylesheet" type="text/css" href="public/css/style.css">
-    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.min.js" charset="utf-8"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Asap|Maven+Pro|Quicksand|Monda|Titillium+Web' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="public/css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.min.js" charset="utf-8"></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
     <script type="text/javascript" src="app.js"></script>
   </head>
   <body>
 
   <div class="container">
+
+
     <header>
       <h1>Take a hike!</h1>
       <div class="headClass">
-        <span class="head2">A hike suggestion generator for Golden and Boulder</span>
+        <span class="head2">A hike suggestion generator</span>
+        <span class="head2">for Golden and Boulder</span>
         <span class="head3">by Courtney Morrissey</span>
       </div>
     </header>
 
     <div class="content">
       <article class="selectBox">
-        Here is where you select first parameter
+
+      <ul class="accordion">
+        <li><button class="accordion-control">Select Area</button>
+          <div class="accordion-panel">
+            <form class="selectArea" action="index.html" method="post">
+              <input type="radio" class="area btnClass" name="boulder" id="boulderButton" value="boulder"> Boulder<br>
+              <input type="radio" class="area btnClass" name="golden" id="goldenButton" value="golden"> Golden <br>
+          </form>
+          </div>
+        </li>
+        <li><button class="accordion-control">Select Mileage</button>
+          <div class="accordion-panel">
+            <form class="selectArea" action="index.html"  id="lengthForm" method="post">
+              <input type="radio" class="length btnClass" name="short" value="short"> 0 - 3 miles<br>
+              <input type="radio" class="length btnClass" name="longer" value="long"> 3 - 6 miles<br>
+              <input type="radio" class="length btnClass" name="longest" value="longest"> 6 + miles<br>
+            </form>
+          </div>
+        </li>
+        <li><button class="accordion-control">Select Strenuousness</button>
+          <div class="accordion-panel">
+            <form class="selectArea" action="index.html" method="post">
+              <input type="radio" class="steepness btnClass" name="mild" value="mild"> Mild<br>
+              <input type="radio" class="steepness btnClass" name="medium" value="medium"> Medium <br>
+              <input type="radio" class="steepness btnClass" name="steep" value="steep"> Tougher <br>
+            </form>
+          </div>
+        </li>
+        <li><button class="accordion-control">Weekend?</button>
+          <div class="accordion-panel">
+            <form class="selectArea" action="index.html" method="post">
+              <input type="radio" class="weekend btnClass" name="yes" value="yes"> Yes<br>
+              <input type="radio" class="weekend btnClass" name="no" value="no"> No<br>
+            </form>
+          </div>
+        </li>
+
+      </ul>
+      <br>
+      <input type="submit" value="Submit!" class="submitBtn">
+      <input type="reset" value="Reset" id="resetBtn">
+
+
       </article>
+
       <aside class="imageDiv">
         <img src="images/24.jpg" alt="kev_map" />
-        <aside>Image Description</aside>
+        <aside></aside>
       </aside>
     </div>
 
     <footer>
-      <a href="about.html">About</a>
-      <a href="https://www.instagram.com/courtneycmorrissey/?hl=en">Instagram</a>
-      <a href="contact.html">Contact</a>
+      <div class="circle">
+          <a href="about.html">About</a>
+      </div>
+      <div class="circle">
+          <a href="https://www.instagram.com/courtneycmorrissey/?hl=en">Instagram</a>
+      </div>
+      <div class="circle">
+          <a href="contact.html">Contact</a>
+      </div>
+
+
+
     </footer>
   </div>
   </body>
