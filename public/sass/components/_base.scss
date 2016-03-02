@@ -247,3 +247,40 @@ a:hover{
   text-decoration: none;
   color: white;
 }
+
+#resultPopup {
+  position: absolute;
+  z-index: 900;
+  opacity: .8;
+  margin: 150px;
+  padding: 15px;
+  background-color: $gr2;
+  border: 5px solid $gr4;
+  border-radius: 25px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  display: inline-block;
+  box-shadow: 7px 7px 3px #888888;
+  display: none;
+  // display: flex;
+  // flex-direction: row;
+}
+
+#resultPopup p{
+  font-size: 25px;
+}
+
+#resultPopup h1{
+  font-size: 45px;
+}
+
+#trailName{
+  font-weight: bold; // WHY NOT WORKING??
+}
+#trailLength{
+  font-weight: bold;
+}
+#trailElev{
+  font-weight: bold;
+}

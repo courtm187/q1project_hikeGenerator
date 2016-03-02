@@ -68,6 +68,7 @@ var hike36 = {name: "Windy Peak", area: "golden", miles: 7.9, elev: "2,000'", le
   $("#hikeForm").on("submit", function(e){
     e.preventDefault();
     var inputs = $(this).serializeArray();
+    console.log(inputs); // yay logs user's inputs from form
 
     // values of the form inputs
     var formData = {};
@@ -75,6 +76,8 @@ var hike36 = {name: "Windy Peak", area: "golden", miles: 7.9, elev: "2,000'", le
     $(inputs).each(function(index, obj){
       formData[obj.name] = obj.value;
     });
+
+    console.log(formData);
     // formData = {area: "boulder", miles: "short", steepness: "mild", busyWeekend: "yes"} <-- put this in local storage??
     //local storage to save boulder or golden to use for the weather //for local storage could also put input box to type in initials
 
@@ -86,38 +89,25 @@ var hike36 = {name: "Windy Peak", area: "golden", miles: 7.9, elev: "2,000'", le
              hike.steepness === formData.steepness &&
              hike.busyWeekend !== formData.busyWeekend;
 
-
     });
 
-    console.log(filteredHikes);
+    console.log(filteredHikes); // IT WORKS!!!!!
+    console.log(filteredHikes[0].area); // works!
+    console.log(filteredHikes[0].name); // TRAIL NAME
+
+
+      $("#trailName").html(filteredHikes[0].name);
+      $("#trailLength").html(filteredHikes[0].miles);
+      $("#trailElev").html(filteredHikes[0].elev);
+    //  $("#trailLink").html(filteredHikes[0].link);
+    //  $("#trailLink").append(<a href=\"filteredHikes[0].link\">Click Here</a>);
+
+      dialogue.show();
+
+  });// end hikefilter code //submit click
 
 
 
-
-
-  });// end hikefilter code
-
-  //  var lengthType;
-   //
-  //   if ($('#boulderButton').prop('checked') === true) {
-   //
-  //     $('#lengthForm').children('input').each(function(){
-  //       if ($(this).prop("checked")) {
-  //         lengthType = $(this).attr('value');
-  //       }
-   //
-  //     })
-   //
-  //     var areaFilter = hikeArray.filter(function(hike){
-  //       return hike.area == 'Boulder' && hike.lengthType == lengthType;
-  //     });
-  //     console.log(areaFilter);
-   //
-  //   }
-   //
-  //   if ($('#goldenButton').prop('checked') === true) {
-   //
-  //   }
 
 
 
@@ -165,3 +155,28 @@ var hike36 = {name: "Windy Peak", area: "golden", miles: 7.9, elev: "2,000'", le
       //old:
     //  $(this).parent().parent().slideToggle();
       //$(this).parent().parent().parent().next().children('.accordion-panel').slideToggle();
+
+
+
+
+      //  var lengthType;
+       //
+      //   if ($('#boulderButton').prop('checked') === true) {
+       //
+      //     $('#lengthForm').children('input').each(function(){
+      //       if ($(this).prop("checked")) {
+      //         lengthType = $(this).attr('value');
+      //       }
+       //
+      //     })
+       //
+      //     var areaFilter = hikeArray.filter(function(hike){
+      //       return hike.area == 'Boulder' && hike.lengthType == lengthType;
+      //     });
+      //     console.log(areaFilter);
+       //
+      //   }
+       //
+      //   if ($('#goldenButton').prop('checked') === true) {
+       //
+      //   }

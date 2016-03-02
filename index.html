@@ -39,9 +39,9 @@
         </li>
         <li><button class="accordion-control">Select Mileage</button>
           <div class="accordion-panel">
-              <input type="radio" class="length btnClass" name="miles" value="short"> 0 - 3 miles<br>
-              <input type="radio" class="length btnClass" name="miles" value="medium"> 3 - 6 miles<br>
-              <input type="radio" class="length btnClass" name="miles" value="long"> 6 + miles<br>
+              <input type="radio" class="length btnClass" name="lengthType" value="short"> 0 - 3 miles<br>
+              <input type="radio" class="length btnClass" name="lengthType" value="medium"> 3 - 6 miles<br>
+              <input type="radio" class="length btnClass" name="lengthType" value="long"> 6 + miles<br>
           </div>
         </li>
         <li><button class="accordion-control">Select Strenuousness</button>
@@ -88,6 +88,21 @@
 
 
     </footer>
+
+    <dialog id="resultPopup">
+      <span id="hikeHeader"><h1>Your hike suggestion is:</h1></span>
+      <p>Trail Name:  <span id="trailName"> </span></p>
+      <p>Miles Roundtrip:  <span id="trailLength"> </span></p>
+      <p>Elevation Gain:  <span id="trailElev"> </span></p>
+      <p>For more information:  <span id="trailLink">
+
+            <a href="#" id="trailWeb"></a></span></p>
+            <!-- API!!! -->
+    </dialog>
+
+
+
   </div>
+  <!-- end of container -->
   </body>
 </html>
