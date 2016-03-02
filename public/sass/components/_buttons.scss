@@ -1,57 +1,58 @@
 $bgc: black;
 $bc: white;
 
+#hikeForm {
+  .submitBtn{
+    height: 30px;
+    width: 70px;
+    color: black;
+    display: block;
+    border: none;
+    border-radius: 10px;
+    padding: 5px;
+    margin: 5px;
+    flex-direction: column;
+    box-shadow: 3px 3px 1px #888888;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    //flex-direction: row;
+    //float: left;
+  }
+  button:focus {outline:0;}
 
-                  .submitBtn{
-                    height: 30px;
-                    width: 70px;
-                    color: black;
-                    display: block;
-                    border: none;
-                    border-radius: 10px;
-                    padding: 5px;
-                    margin: 5px;
-                    flex-direction: column;
-                    box-shadow: 3px 3px 1px #888888;
-                    text-align: center;
-                    align-items: center;
-                    justify-content: center;
-                    font-size: 16px;
-                    //flex-direction: row;
-                    //float: left;
-                  }
-                  button:focus {outline:0;}
+  .submitBtn:focus {outline:0;}
 
-                  .submitBtn:focus {outline:0;}
+  .submitBtn:hover {
+    width: 80px;
+    background-color: darkgray;
+  }
 
-                  .submitBtn:hover {
-                    width: 80px;
-                    background-color: darkgray;
-                  }
-
-                  #resetBtn{
-                    height: 30px;
-                    width: 70px;
-                    color: black;
-                    display: block;
-                    border: none;
-                    border-radius: 10px;
-                    padding: 5px;
-                    margin: 5px;
-                    flex-direction: column;
-                    box-shadow: 3px 3px 1px #888888;
-                    text-align: center;
-                    align-items: center;
-                    justify-content: center;
-                    font-size: 17px;
-                    //flex-direction: row;
-                    //float: left;
-                  }
+  #resetBtn{
+    height: 30px;
+    width: 70px;
+    color: black;
+    display: block;
+    border: none;
+    border-radius: 10px;
+    padding: 5px;
+    margin: 5px;
+    flex-direction: column;
+    box-shadow: 3px 3px 1px #888888;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-size: 17px;
+    //flex-direction: row;
+    //float: left;
+  }
 
 
-                  #resetBtn:focus {outline:0;}
+  #resetBtn:focus {outline:0;}
 
-                  #resetBtn:hover {
-                    width: 80px;
-                    background-color: darkgray;
-                  }
+  #resetBtn:hover {
+    width: 80px;
+    background-color: darkgray;
+  }
+}

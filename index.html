@@ -29,47 +29,42 @@
     <div class="content">
       <article class="selectBox">
 
+    <form id="hikeForm">
       <ul class="accordion">
         <li><button class="accordion-control">Select Area</button>
           <div class="accordion-panel">
-            <form class="selectArea" action="index.html" method="post">
-              <input type="radio" class="area btnClass" name="boulder" id="boulderButton" value="boulder"> Boulder<br>
-              <input type="radio" class="area btnClass" name="golden" id="goldenButton" value="golden"> Golden <br>
-          </form>
+              <input type="radio" class="area btnClass" name="area" id="boulderButton" value="boulder"> Boulder<br>
+              <input type="radio" class="area btnClass" name="area" id="goldenButton" value="golden"> Golden <br>
           </div>
         </li>
         <li><button class="accordion-control">Select Mileage</button>
           <div class="accordion-panel">
-            <form class="selectArea" action="index.html"  id="lengthForm" method="post">
-              <input type="radio" class="length btnClass" name="short" value="short"> 0 - 3 miles<br>
-              <input type="radio" class="length btnClass" name="longer" value="long"> 3 - 6 miles<br>
-              <input type="radio" class="length btnClass" name="longest" value="longest"> 6 + miles<br>
-            </form>
+              <input type="radio" class="length btnClass" name="miles" value="short"> 0 - 3 miles<br>
+              <input type="radio" class="length btnClass" name="miles" value="medium"> 3 - 6 miles<br>
+              <input type="radio" class="length btnClass" name="miles" value="long"> 6 + miles<br>
           </div>
         </li>
         <li><button class="accordion-control">Select Strenuousness</button>
           <div class="accordion-panel">
-            <form class="selectArea" action="index.html" method="post">
-              <input type="radio" class="steepness btnClass" name="mild" value="mild"> Mild<br>
-              <input type="radio" class="steepness btnClass" name="medium" value="medium"> Medium <br>
-              <input type="radio" class="steepness btnClass" name="steep" value="steep"> Tougher <br>
-            </form>
+              <input type="radio" class="steepness btnClass" name="steepness" value="mild"> Mild<br>
+              <input type="radio" class="steepness btnClass" name="steepness" value="moderate"> Medium <br>
+              <input type="radio" class="steepness btnClass" name="steepness" value="difficult"> Tougher <br>
           </div>
         </li>
         <li><button class="accordion-control">Weekend?</button>
           <div class="accordion-panel">
-            <form class="selectArea" action="index.html" method="post">
-              <input type="radio" class="weekend btnClass" name="yes" value="yes"> Yes<br>
-              <input type="radio" class="weekend btnClass" name="no" value="no"> No<br>
-            </form>
+              <input type="radio" class="weekend btnClass" name="busyWeekend" value="yes"> Yes<br>
+              <input type="radio" class="weekend btnClass" name="busyWeekend" value="no"> No<br>
           </div>
         </li>
 
       </ul>
       <br>
-      <input type="submit" value="Submit!" class="submitBtn">
-      <input type="reset" value="Reset" id="resetBtn">
-
+      <div class="buttonHolder">
+          <input type="submit" value="Submit!" class="submitBtn">
+          <input type="reset" value="Reset" id="resetBtn">
+      </div>
+  </form>
 
       </article>
 

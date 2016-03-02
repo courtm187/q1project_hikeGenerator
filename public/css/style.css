@@ -64,6 +64,11 @@ h1 {
   flex-direction: column;
   box-shadow: 7px 7px 3px #888888; }
 
+#hikeForm {
+  text-align: center;
+  align-items: center;
+  justify-content: center; }
+
 .accordion {
   float: left;
   flex-direction: column;
@@ -129,6 +134,12 @@ img {
   justify-content: center;
   border-radius: 25px; }
 
+.buttonHolder {
+  text-align: center;
+  float: center;
+  justify-content: center;
+  align-items: center; }
+
 .circle {
   width: 100px;
   height: 100px;
@@ -190,7 +201,7 @@ body {
 .content {
   color: white; }
 
-.submitBtn {
+#hikeForm .submitBtn {
   height: 30px;
   width: 70px;
   color: black;
@@ -206,17 +217,17 @@ body {
   justify-content: center;
   font-size: 16px; }
 
-button:focus {
+#hikeForm button:focus {
   outline: 0; }
 
-.submitBtn:focus {
+#hikeForm .submitBtn:focus {
   outline: 0; }
 
-.submitBtn:hover {
+#hikeForm .submitBtn:hover {
   width: 80px;
   background-color: darkgray; }
 
-#resetBtn {
+#hikeForm #resetBtn {
   height: 30px;
   width: 70px;
   color: black;
@@ -232,9 +243,9 @@ button:focus {
   justify-content: center;
   font-size: 17px; }
 
-#resetBtn:focus {
+#hikeForm #resetBtn:focus {
   outline: 0; }
 
-#resetBtn:hover {
+#hikeForm #resetBtn:hover {
   width: 80px;
   background-color: darkgray; }

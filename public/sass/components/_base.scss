@@ -94,7 +94,11 @@ h1{
       box-shadow: 7px 7px 3px #888888;
       //float: left;
     }
-
+    #hikeForm{
+      text-align: center;
+      align-items: center;
+      justify-content: center;
+    }
 
           .accordion {
             @extend %standardStyle;
@@ -186,6 +190,13 @@ img {
   text-align: center;
   justify-content: center;
   border-radius: 25px;
+}
+
+.buttonHolder{
+  text-align: center;
+  float: center;
+  justify-content: center;
+  align-items: center;
 }
 
 .circle {
