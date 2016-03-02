@@ -102,7 +102,7 @@ var hike36 = {name: "Windy Peak", area: "golden", miles: 7.9, elev: "2,000'", le
     //  $("#trailLink").html(filteredHikes[0].link);
     //  $("#trailLink").append(<a href=\"filteredHikes[0].link\">Click Here</a>);
 
-      dialogue.show();
+      $("dialog").show();
 
   });// end hikefilter code //submit click
 
