@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>Take a Hike!</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <link href='https://fonts.googleapis.com/css?family=Asap|Maven+Pro|Quicksand|Monda|Titillium+Web' rel='stylesheet' type='text/css'>
@@ -60,10 +60,10 @@
 
       </ul>
       <br>
-      <div class="buttonHolder">
-          <input type="submit" value="Submit!" class="submitBtn">
-          <input type="reset" value="Reset" id="resetBtn">
-      </div>
+      <input type="submit" value="Submit!" class="submitBtn moveButtons">
+      <input type="reset" value="Reset" class="moveButtons" id="resetBtn">
+      <!-- <div class="buttonHolder"> -->
+      <!-- </div> -->
   </form>
 
       </article>
@@ -79,25 +79,28 @@
           <a href="about.html">About</a>
       </div>
       <div class="circle">
-          <a href="https://www.instagram.com/courtneycmorrissey/?hl=en">Instagram</a>
+          <a href="https://www.instagram.com/courtneycmorrissey/?hl=en" target="_blank">Instagram</a>
       </div>
-      <div class="circle">
-          <a href="contact.html">Contact</a>
+      <div class="circle" id="leaveNoTrace">
+          <a href="https://lnt.org/sites/default/files/PrinciplesTrifold.pdf" target="_blank" alt="Leave No Trace">Leave No Trace</a>
       </div>
 
 
 
     </footer>
 
-    <dialog id="resultPopup">
-      <span id="hikeHeader"><h1>Your hike suggestion is:</h1></span>
+    <dialog id="resultPopup" class="inDialog">
+      <span id="hikeHeader"><h1>Your hike suggestion is:</h1></span><br>
+      <section class="resultSection">
       <p>Trail Name:  <span id="trailName"> </span></p>
       <p>Miles Roundtrip:  <span id="trailLength"> </span></p>
       <p>Elevation Gain:  <span id="trailElev"> </span></p>
+      <p id=weather>Current Temperature: </p>
       <p>For more information:  <span id="trailLink">
 
             <a href="#" id="trailWeb"></a></span></p>
-            <!-- API!!! -->
+
+      </section>
     </dialog>
 
 

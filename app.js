@@ -57,8 +57,8 @@ var hike31 = {name: "Centennial Cone", area: "golden", miles: 12, elev: "1,000'"
 var hike32 = {name: "Belcher Hill", area: "golden", miles: 9, elev: "1,800'", lengthType: "long", steepness: "moderate", busyWeekend: "yes", link: "http://www.protrails.com/trail/133/boulder-denver-golden-fort-collins-lyons-belcher-hill-trail"};
 var hike33 = {name: "Belcher Hill - Rawhide - Longhorn - Whipple Tree Trail", area: "golden", miles: 8.8, elev: "2,140'", lengthType: "long", steepness: "difficult", busyWeekend: "yes", link: "http://www.protrails.com/trail/135/boulder-denver-golden-fort-collins-lyons-belcher-hill-rawhide-longhorn-whippletree-loop"};
 var hike34 = {name: "Dakota Ridge", area: "golden", miles: 6, elev: "700'", lengthType: "long", steepness: "mild", busyWeekend: "no", link: "https://www.trails.com/tcatalog_trail.aspx?trailid=BGR030-030"};
-var hike35 = {name: "Bergen Peak", area: "golden", miles: 9.4, elev: "2,100'", lengthType: "long", steepness: "moderate", busyWeekend: "no", link: "http://www.protrails.com/trail/644/boulder-denver-golden-fort-collins-lyons-bergen-peak"};
-var hike36 = {name: "Windy Peak", area: "golden", miles: 7.9, elev: "2,000'", lengthType: "long", steepness: "difficult", busyWeekend: "no", link: "http://www.protrails.com/trail/23/boulder-denver-golden-fort-collins-lyons-mountain-lion-loop-trail-windy-peak"};
+var hike35 = {name: "Bergen Peak", area: "golden", miles: 9.4, elev: "2,100'", lengthType: "long", steepness: "difficult", busyWeekend: "no", link: "http://www.protrails.com/trail/644/boulder-denver-golden-fort-collins-lyons-bergen-peak"};
+var hike36 = {name: "Windy Peak", area: "golden", miles: 7.9, elev: "1,800'", lengthType: "long", steepness: "moderate", busyWeekend: "no", link: "http://www.protrails.com/trail/23/boulder-denver-golden-fort-collins-lyons-mountain-lion-loop-trail-windy-peak"};
 
 
   hikeArray.push(hike1, hike2, hike3, hike4, hike5, hike6, hike7, hike8, hike9, hike10, hike11, hike12, hike13, hike14, hike15, hike16, hike17, hike18, hike19,
@@ -100,12 +100,57 @@ var hike36 = {name: "Windy Peak", area: "golden", miles: 7.9, elev: "2,000'", le
       $("#trailLength").html(filteredHikes[0].miles);
       $("#trailElev").html(filteredHikes[0].elev);
     //  $("#trailLink").html(filteredHikes[0].link);
-    //  $("#trailLink").append(<a href=\"filteredHikes[0].link\">Click Here</a>);
+     $("#trailWeb").html("<a href=" + filteredHikes[0].link + " target='_blank' alt='trail description'>Click Here</a>");
 
       $("dialog").show();
 
+    $('body').on('click', function(e) {
+      var target = $(e.target);
+      if (target.hasClass('.inDialog') || target.parents('.inDialog').length === 0) {
+        $("dialog").hide();
+      }
+    })
+
+      getWeather(filteredHikes[0].area);
+
+
+
   });// end hikefilter code //submit click
 
+//API
+
+// var myWeather = ["Golden", "Boulder"];
+
+function getWeather (param){ // the param is defined when you call the getMovies function from within the forEach below -
+//  it will be a movie title string from the array myMovies
+  $.ajax({
+    url: 'https://api.apixu.com/v1/forecast.json?key=7cca46df45774803b2d211925162902&q='+param, //will look for corresponding item in the param
+    //(which is an item from the myMovies array), because of the forEach defined below using myWeather
+    //automatically remove spaces in title
+    method: "GET",
+    success: function(data){
+      console.log(data);
+      var currentTemp = data.current.temp_f;
+      //var forecastTemp = data.;
+      console.log(currentTemp);
+
+
+
+     $("#weather").append($("<span class='current'>" + currentTemp +" F</span>"));
+    // $("#weather").append($("<div class='forecast'>" + forecastTemp +"</div>"));
+    //
+
+
+    //  console.log(data);
+      }
+  });
+};
+
+// myWeather.forEach(function(item){//item is not a placeholder -its the reference for the current iteration(piece) over the myWeather array
+//
+// getWeather(item);
+//
+// })
 
 
 

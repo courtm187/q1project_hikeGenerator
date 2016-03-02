@@ -26,7 +26,6 @@ header {
   box-shadow: 7px 7px 3px #888888; }
 
 h1 {
-  float: left;
   margin-left: 35px;
   justify-content: center;
   text-shadow: 2px 2px; }
@@ -69,6 +68,9 @@ h1 {
   align-items: center;
   justify-content: center; }
 
+.moveButtons {
+  margin-left: 35% !important; }
+
 .accordion {
   float: left;
   flex-direction: column;
@@ -76,7 +78,8 @@ h1 {
   color: black;
   margin: 0;
   padding: 0;
-  width: 200px; }
+  width: 200px;
+  margin-bottom: 10px; }
 
 .accordion li {
   float: left;
@@ -134,11 +137,8 @@ img {
   justify-content: center;
   border-radius: 25px; }
 
-.buttonHolder {
-  text-align: center;
-  float: center;
-  justify-content: center;
-  align-items: center; }
+.buttonHolder input {
+  margin-left: 10%; }
 
 .circle {
   width: 100px;
@@ -146,9 +146,9 @@ img {
   border-radius: 50px;
   background-color: #ac3973;
   border: 5px solid #800040;
-  line-height: 100px;
   text-align: center;
   margin-right: 20px;
+  margin-bottom: 10px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -173,36 +173,49 @@ img {
     -webkit-transform: scale(1);
     opacity: 0.75; } }
 
+#leaveNoTrace {
+  font-size: 13px; }
+
 a {
   color: white;
-  text-decoration: none;
-  display: block; }
+  text-decoration: none; }
 
 a:hover {
   text-decoration: none;
   color: white; }
 
+a:visited {
+  text-decoration: none !important;
+  color: white; }
+
 #resultPopup {
   position: absolute;
-  z-index: 900;
-  opacity: .8;
-  margin: 150px;
+  margin-top: -750px;
   padding: 15px;
   background-color: #70db70;
-  border: 5px solid green;
+  border: 20px solid green;
   border-radius: 25px;
   align-items: center;
-  justify-content: center;
-  text-align: center;
-  display: inline-block;
-  box-shadow: 7px 7px 3px #888888;
-  display: none; }
-
-#resultPopup p {
-  font-size: 25px; }
+  width: 77%;
+  height: 95%;
+  box-shadow: 7px 7px 3px #888888; }
 
 #resultPopup h1 {
-  font-size: 45px; }
+  font-size: 40px;
+  margin-top: 25px;
+  margin-left: 25px;
+  align-items: center; }
+
+.resultSection {
+  margin-top: 20px;
+  padding: 10px; }
+
+.resultSection p {
+  font-size: 22px; }
+
+.current {
+  font-size: 22px;
+  display: inline; }
 
 #trailName {
   font-weight: bold; }
@@ -240,6 +253,7 @@ body {
   border: none;
   border-radius: 10px;
   padding: 5px;
+  margin-top: 3px;
   margin: 5px;
   flex-direction: column;
   box-shadow: 3px 3px 1px #888888;
@@ -266,7 +280,7 @@ body {
   border: none;
   border-radius: 10px;
   padding: 5px;
-  margin: 5px;
+  margin-top: 4px !important;
   flex-direction: column;
   box-shadow: 3px 3px 1px #888888;
   text-align: center;
