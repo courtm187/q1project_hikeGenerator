@@ -115,6 +115,75 @@ var hike36 = {name: "Windy Peak", area: "golden", miles: 7.9, elev: "1,800'", le
     });
 
     console.log(formData);
+
+
+    // var storeData = localStorage.setItem("Input Results", formData);
+    // console.log(storeData);
+    // stringify(storeData);
+
+
+    // var data = {
+    //   title: "My favorite data",
+    //   submittedBy: "Fred",
+    //   points: 1337
+    // }
+
+  //  data.title = "I hate data"
+    localStorage.formData = JSON.stringify(formData);
+
+
+    var myObject = JSON.parse(localStorage.formData);
+    console.log("local storage woo!")
+    console.log(myObject);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     // formData = {area: "boulder", miles: "short", steepness: "mild", busyWeekend: "yes"} <-- put this in local storage??
     //local storage to save boulder or golden to use for the weather //for local storage could also put input box to type in initials
 
