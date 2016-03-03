@@ -138,7 +138,6 @@ h1{
 
           .accordion-control {
             display: inline-block;
-          //float: left;
             background-color: lightgray;
             color: black;
             font-size:1.5em;
@@ -181,11 +180,6 @@ h1{
       }
     }
 
-footer {
-
-
-}
-
 .imageDiv img {
   width: 400px;
   height: 400px;
@@ -196,14 +190,6 @@ footer {
   text-align: center;
   justify-content: center;
   border-radius: 25px;
-}
-
-.buttonHolder input{
-  // text-align: center;
-  margin-left: 10%;
-  // display: flex;
-  // justify-content: center;
-  // align-items: center;
 }
 
 .circle {
@@ -244,9 +230,19 @@ footer {
     opacity: 0.75;
   }
 }
+#aboutClick p{
+  display: inline-flex;
+  color: white;
+  margin: 0px;
+  font-size: 15px;
+
+//   align-items: center;
+//   justify-content: center;
+//   text-align: center;
+ }
 
 #leaveNoTrace{
-  font-size: 13px;
+  font-size: 14px;
 }
 a{
   color: white;
@@ -363,33 +359,26 @@ a:visited{
 }
 .aboutSection {
   display: inline-block;
-//  margin-top: 10px;
-//  padding: 20px;
+  padding: 10px;
   width: 40%;
   display: flex;
   margin-left: 15px;
-  padding: 30px;
- flex-direction: column;
+  flex-direction: column;
   flex-grow: 1;
-
 }
-.aboutSection p{
-  //display: inline-block;
 
+.aboutSection p{
   font-size: 18px;
   font-weight: bold;
   text-shadow: 2px 2px #4d4d4d;
 }
+
 #aboutImage{
   display: inline-block;;
-//  float:right;
-//  margin-right: 20px;
-   margin-bottom: 40px;
-  //display: flex;
-  //flex-direction: column;
-
+  margin-bottom: 40px;
   flex-grow: 1;
 }
+
 #aboutHeader{
   margin-top: 20px;
   padding: 10px;
@@ -402,13 +391,5 @@ display: inline-block;
 padding: 12px;
 margin-right: -200px;
 margin-left: 15px;
-
-//display: flex;
-// margin-left: auto;
-// margin-right: auto;
-// display: block;
-// float: center;
-// text-align: center;
-// justify-content: center;
 border-radius: 25px;
 }

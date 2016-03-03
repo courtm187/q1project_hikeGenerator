@@ -139,9 +139,6 @@ h1 {
   justify-content: center;
   border-radius: 25px; }
 
-.buttonHolder input {
-  margin-left: 10%; }
-
 .circle {
   width: 100px;
   height: 100px;
@@ -175,8 +172,14 @@ h1 {
     -webkit-transform: scale(1);
     opacity: 0.75; } }
 
+#aboutClick p {
+  display: inline-flex;
+  color: white;
+  margin: 0px;
+  font-size: 15px; }
+
 #leaveNoTrace {
-  font-size: 13px; }
+  font-size: 14px; }
 
 a {
   color: white;
@@ -271,10 +274,10 @@ a:visited {
 
 .aboutSection {
   display: inline-block;
+  padding: 10px;
   width: 40%;
   display: flex;
   margin-left: 15px;
-  padding: 30px;
   flex-direction: column;
   flex-grow: 1; }
 

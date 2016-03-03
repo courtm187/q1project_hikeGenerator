@@ -1,26 +1,48 @@
 $(function(){
   console.log("it works");
 
+//toggle accordion panels
     $(".accordion").on("click", ".accordion-control", function(e){ // When clicked
-      e.preventDefault();                    // Prevent default action of button
+      e.preventDefault();
+      console.log($(this));                 // Prevent default action of button
       $(this)                                // Get the element the user clicked on
         .next(".accordion-panel")            // Select following panel
         .not(":animated")                    // If it is not currently animating
         .slideToggle();                      // Use slide toggle to show or hide it
     });
 
+
+// toggle one panel at a time
 $(".btnClass").on('click', function(){
   $(this).parent().slideToggle();
   $(this).parent().parent().next().children('.accordion-panel').slideToggle();
+});
 
-})
 
+// on reset, clear buttons and close panels
 $("#resetBtn").on("click", function(){
   console.log("reset");
   $(".btnClass").prop('checked', false);
-
+  $(".accordion-panel").hide();
 });
 
+
+//show about popup
+$("#aboutClick").on("click", function(){
+  event.stopPropagation();
+  $('#aboutPopup').show();
+});
+
+// close dialogue when click outside
+$('body').on('click', function(e) {
+  var target = $(e.target);
+  console.log(target.parents('.circle').length);
+  if (target.hasClass('.inDialog') || target.parents('.inDialog').length === 0) {
+    $(".inDialog").hide();
+  }
+})
+
+//hike function filters array based on form inputs
   var hikeArray = [];
 
 var hike1 = {name: "McClintock-Enchanted Mesa", area: "boulder", miles: 2, elev: "440'", lengthType: "short", steepness: "mild", busyWeekend: "yes", link: "http://www.protrails.com/trail/153/boulder-denver-golden-fort-collins-lyons-mcclintock-enchanted-mesa-loop"};
@@ -64,7 +86,7 @@ var hike36 = {name: "Windy Peak", area: "golden", miles: 7.9, elev: "1,800'", le
   hikeArray.push(hike1, hike2, hike3, hike4, hike5, hike6, hike7, hike8, hike9, hike10, hike11, hike12, hike13, hike14, hike15, hike16, hike17, hike18, hike19,
                 hike20, hike21, hike22, hike23, hike24, hike25, hike26, hike27, hike28, hike29, hike30, hike31, hike32, hike33, hike34, hike35, hike36);
 
-
+//form validation
   $("#hikeForm").on("submit", function(e){
     e.preventDefault();
 
@@ -110,7 +132,6 @@ var hike36 = {name: "Windy Peak", area: "golden", miles: 7.9, elev: "1,800'", le
     console.log(filteredHikes[0].area); // works!
     console.log(filteredHikes[0].name); // TRAIL NAME
 
-
       $("#trailName").html(filteredHikes[0].name);
       $("#trailLength").html(filteredHikes[0].miles);
       $("#trailElev").html(filteredHikes[0].elev);
@@ -118,23 +139,11 @@ var hike36 = {name: "Windy Peak", area: "golden", miles: 7.9, elev: "1,800'", le
 
       $("#resultPopup").show();
 
-    $('body').on('click', function(e) {
-      var target = $(e.target);
-      if (target.hasClass('.inDialog') || target.parents('.inDialog').length === 0) {
-        $("#resultPopup").hide();
-      }
-    })
-
-
-
-
-
       getWeather(filteredHikes[0].area);
-
 
   });// end hikefilter code //submit click
 
-
+// weather API
 function getWeather (param){
   $.ajax({
     url: 'https://api.apixu.com/v1/forecast.json?key=7cca46df45774803b2d211925162902&q='+param,
@@ -145,98 +154,11 @@ function getWeather (param){
 
       console.log(currentTemp);
 
-     $("#weather").append($("<span class='current'>" + currentTemp +" F</span>"));
-
+  //   $("#weather").html($("<span class='current'>" + currentTemp +" F</span>"));
+        $("#weather").html($("<span class='current'>" + currentTemp +" F</span>"));
       }
   });
 }; //end API function
 
-  $("#aboutClick").on("click", function(){
-      $("#aboutPopup").show();
-  //  $("#aboutPopup").addClass("showing").toggle();
 
-     //$('body').on('click', function() {
-  //     if
-
-    //   var target = $(e.target);
-    //   console.log(target);
-    //
-    //   if (target.hasClass('.inAboutDialog')) //|| target.parents('.inAboutDialog').length === 0)
-    //   {
-    //     $(".inAboutDialog").hide();
-    //     //$("#aboutPopup").hide();
-    //   };
-    //});
-
-  }); //end aboutPopup function
-
-
-
-}); //end function
-
-
-// $(".circle").hover(function(){
-//   console.log("argh");
-//
-//   //$(this).effect("bounce", {"slow");
-//   $(this).toggle({
-//         effect: "scale",
-//         percent: "120%"
-//       },900);
-//   });
-
-//button try 1
-  //   $(".btnClass").on('click', function(){
-  //     if ($(this).is(":checked")){
-  //       console.log("button click");
-  //
-  //     $(".accordion-panel").slideToggle();
-  //     $(".accordion").next(".accordion-panel").not(":animated").slideToggle();
-  //   }
-  // });//button click function
-
-//button try 2
-// $(".btnClass").on('change', function(){
-//     $(this) ?'slideDown':'slideUp']();
-// });
-
-//button try 3
-// $(".btnClass").on('click', function(){
-//     if ($(this).is(":checked")){
-//       console.log("button click");
-//       if((".accordion-panel").index()[0]){
-//         $(this).siblings()[1].slideToggle();
-//        } //else if ((".accordion-panel").index()[1])
-//      }
-//    });
-    //  $('.accordion-panel').siblings()[0]
-
-
-      //old:
-    //  $(this).parent().parent().slideToggle();
-      //$(this).parent().parent().parent().next().children('.accordion-panel').slideToggle();
-
-
-
-
-      //  var lengthType;
-       //
-      //   if ($('#boulderButton').prop('checked') === true) {
-       //
-      //     $('#lengthForm').children('input').each(function(){
-      //       if ($(this).prop("checked")) {
-      //         lengthType = $(this).attr('value');
-      //       }
-       //
-      //     })
-       //
-      //     var areaFilter = hikeArray.filter(function(hike){
-      //       return hike.area == 'Boulder' && hike.lengthType == lengthType;
-      //     });
-      //     console.log(areaFilter);
-       //
-      //   }
-       //
-      //   if ($('#goldenButton').prop('checked') === true) {
-       //
-      //   }
+}); //end document.ready function
