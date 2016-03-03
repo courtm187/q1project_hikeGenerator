@@ -51,16 +51,17 @@ header {
   box-shadow: 7px 7px 3px #888888;
 }
 h1{
-
+  margin-top:15px !important;
   margin-left: 35px;
   justify-content: center;
-  text-shadow: 2px 2px;
+  text-shadow: 2px 2px #4d4d4d;
+  display: inline;
 }
 .headClass{
   display: inline;
   float: right;
   justify-content: center;
-  margin-right: 70px;
+  margin-right: 50px;
   margin-top: 10px;
 }
       .head2{
@@ -185,7 +186,7 @@ footer {
 
 }
 
-img {
+.imageDiv img {
   width: 400px;
   height: 400px;
   margin-left: auto;
@@ -246,9 +247,6 @@ img {
 
 #leaveNoTrace{
   font-size: 13px;
-  ;
-//  white-space: pre-wrap;
-  // overflow: visible;
 }
 a{
   color: white;
@@ -266,26 +264,23 @@ a:visited{
 
 #resultPopup {
   position: absolute;
-  // z-index: 900;
-  // opacity: .9;
+  background-image: url("../tree3.jpg");
   margin-top: -750px;
-  padding: 15px;
+  padding: 30px;
+  color: white;
   background-color: $gr2;
   border: 20px solid $gr4;
   border-radius: 25px;
   align-items: center;
-  //justify-content: center;
-//  text-align: center;
   width: 77%;
   height:95%;
-  // display: inline-block;
   box-shadow: 7px 7px 3px #888888;
   // display: none;
   // display: flex;
   // flex-direction: row;
 }
 #resultPopup h1{
-  font-size: 40px;
+  font-size: 60px;
   margin-top: 25px;
   margin-left: 25px;
   align-items: center;
@@ -293,16 +288,24 @@ a:visited{
   //text-align: center;
 }
 
+#resultPopup a{
+  color: #e600e6;
+  font-size: 30px;
+  font-weight: bold;
+  text-shadow: 2px 2px #4d4d4d;
+}
 .resultSection {
   margin-top: 20px;
   padding: 10px;
 }
 .resultSection p{
-  font-size: 22px;
+  font-size: 30px;
+  font-weight: bold;
+  text-shadow: 2px 2px #4d4d4d;
 }
 
 .current{
-  font-size: 22px;
+  font-size: 30px;
   display:inline;
 }
 
@@ -314,4 +317,98 @@ a:visited{
 }
 #trailElev{
   font-weight: bold;
+}
+
+
+#aboutPopup {
+  position: absolute;
+//  background-image: url("../tree3.jpg");
+  margin-top: -750px;
+  padding: 15px;
+  color: white;
+  background-color: $ltpur;
+  border: 20px solid $dkpur;
+  border-radius: 25px;
+  align-items: center;
+  width: 90%;
+  height:98%;
+  box-shadow: 7px 7px 3px #888888;
+
+  align-items: center;
+//  display: inline-block;
+  // display: none;
+  // display: flex;
+  // flex-direction: row;
+}
+#aboutPopup h1{
+  font-size: 60px;
+  margin-top: 25px;
+  margin-left: 25px;
+  align-items: center;
+//  justify-content: center;
+  //text-align: center;
+}
+
+#aboutPopup a{
+  color: #e600e6;
+  font-size: 30px;
+  font-weight: bold;
+  text-shadow: 2px 2px #4d4d4d;
+}
+
+#aboutContainer{
+  display: flex;
+  flex-direction: row;
+  margin-top: 70px;
+}
+.aboutSection {
+  display: inline-block;
+//  margin-top: 10px;
+//  padding: 20px;
+  width: 40%;
+  display: flex;
+  margin-left: 15px;
+  padding: 30px;
+ flex-direction: column;
+  flex-grow: 1;
+
+}
+.aboutSection p{
+  //display: inline-block;
+
+  font-size: 18px;
+  font-weight: bold;
+  text-shadow: 2px 2px #4d4d4d;
+}
+#aboutImage{
+  display: inline-block;;
+//  float:right;
+//  margin-right: 20px;
+   margin-bottom: 40px;
+  //display: flex;
+  //flex-direction: column;
+
+  flex-grow: 1;
+}
+#aboutHeader{
+  margin-top: 20px;
+  padding: 10px;
+}
+
+#aboutImage img{
+width: 450px;
+height: 450px;
+display: inline-block;
+padding: 12px;
+margin-right: -200px;
+margin-left: 15px;
+
+//display: flex;
+// margin-left: auto;
+// margin-right: auto;
+// display: block;
+// float: center;
+// text-align: center;
+// justify-content: center;
+border-radius: 25px;
 }

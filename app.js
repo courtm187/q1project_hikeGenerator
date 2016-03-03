@@ -67,6 +67,21 @@ var hike36 = {name: "Windy Peak", area: "golden", miles: 7.9, elev: "1,800'", le
 
   $("#hikeForm").on("submit", function(e){
     e.preventDefault();
+
+    if (!$('input[name=area]:checked').val() ) {
+        alert("Please select area");
+      }
+    if (!$('input[name=lengthType]:checked').val() ) {
+        alert("Please select length");
+      }
+    if (!$('input[name=steepness]:checked').val() ) {
+        alert("Please select strenuousness");
+      }
+    if (!$('input[name=busyWeekend]:checked').val() ) {
+        alert("Please select if you are hiking on a weekend.");
+        return false;
+      }
+
     var inputs = $(this).serializeArray();
     console.log(inputs); // yay logs user's inputs from form
 
@@ -99,61 +114,61 @@ var hike36 = {name: "Windy Peak", area: "golden", miles: 7.9, elev: "1,800'", le
       $("#trailName").html(filteredHikes[0].name);
       $("#trailLength").html(filteredHikes[0].miles);
       $("#trailElev").html(filteredHikes[0].elev);
-    //  $("#trailLink").html(filteredHikes[0].link);
-     $("#trailWeb").html("<a href=" + filteredHikes[0].link + " target='_blank' alt='trail description'>Click Here</a>");
+      $("#trailWeb").html("<a href=" + filteredHikes[0].link + " target='_blank' alt='trail description'>Click Here</a>");
 
-      $("dialog").show();
+      $("#resultPopup").show();
 
     $('body').on('click', function(e) {
       var target = $(e.target);
       if (target.hasClass('.inDialog') || target.parents('.inDialog').length === 0) {
-        $("dialog").hide();
+        $("#resultPopup").hide();
       }
     })
+
+
+
+
 
       getWeather(filteredHikes[0].area);
 
 
-
   });// end hikefilter code //submit click
 
-//API
 
-// var myWeather = ["Golden", "Boulder"];
-
-function getWeather (param){ // the param is defined when you call the getMovies function from within the forEach below -
-//  it will be a movie title string from the array myMovies
+function getWeather (param){
   $.ajax({
-    url: 'https://api.apixu.com/v1/forecast.json?key=7cca46df45774803b2d211925162902&q='+param, //will look for corresponding item in the param
-    //(which is an item from the myMovies array), because of the forEach defined below using myWeather
-    //automatically remove spaces in title
+    url: 'https://api.apixu.com/v1/forecast.json?key=7cca46df45774803b2d211925162902&q='+param,
     method: "GET",
     success: function(data){
       console.log(data);
       var currentTemp = data.current.temp_f;
-      //var forecastTemp = data.;
+
       console.log(currentTemp);
 
-
-
      $("#weather").append($("<span class='current'>" + currentTemp +" F</span>"));
-    // $("#weather").append($("<div class='forecast'>" + forecastTemp +"</div>"));
-    //
 
-
-    //  console.log(data);
       }
   });
-};
+}; //end API function
 
-// myWeather.forEach(function(item){//item is not a placeholder -its the reference for the current iteration(piece) over the myWeather array
-//
-// getWeather(item);
-//
-// })
+  $("#aboutClick").on("click", function(){
+      $("#aboutPopup").show();
+  //  $("#aboutPopup").addClass("showing").toggle();
 
+     //$('body').on('click', function() {
+  //     if
 
+    //   var target = $(e.target);
+    //   console.log(target);
+    //
+    //   if (target.hasClass('.inAboutDialog')) //|| target.parents('.inAboutDialog').length === 0)
+    //   {
+    //     $(".inAboutDialog").hide();
+    //     //$("#aboutPopup").hide();
+    //   };
+    //});
 
+  }); //end aboutPopup function
 
 
 
