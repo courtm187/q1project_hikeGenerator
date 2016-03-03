@@ -33,28 +33,41 @@
       <ul class="accordion">
         <li><button class="accordion-control">Select Area</button>
           <div class="accordion-panel">
-              <input type="radio" class="area btnClass" name="area" id="boulderButton" value="boulder"> Boulder<br>
-              <input type="radio" class="area btnClass" name="area" id="goldenButton" value="golden"> Golden <br>
+              <!-- <input type="radio" class="area btnClass" name="area" id="boulderButton" value="boulder"> Boulder<br>
+              <input type="radio" class="area btnClass" name="area" id="goldenButton" value="golden"> Golden <br> -->
+
+              <!-- test -->
+              <input type="radio" class="area btnClass" name="area" id="boulderButton" value="boulder"><label for="boulderButton">&nbsp;Boulder</label><br/>
+              <input type="radio" class="area btnClass" name="area" id="goldenButton" value="golden"><label for="goldenButton">&nbsp;Golden</label><br/>
+
+
+
+
+
+
+
+
+
           </div>
         </li>
         <li><button class="accordion-control">Select Mileage</button>
           <div class="accordion-panel">
-              <input type="radio" class="length btnClass" name="lengthType" value="short"> 0 - 3 miles<br>
-              <input type="radio" class="length btnClass" name="lengthType" value="medium"> 3 - 6 miles<br>
-              <input type="radio" class="length btnClass" name="lengthType" value="long"> 6 + miles<br>
+              <input type="radio" class="length btnClass" name="lengthType" id="shortBtn" value="short"><label for="shortBtn"> &nbsp;0 - 3 miles</label><br>
+              <input type="radio" class="length btnClass" name="lengthType" id="medBtn" value="medium"><label for="medBtn"> &nbsp;3 - 6 miles</label><br>
+              <input type="radio" class="length btnClass" name="lengthType" id="longBtn" value="long"><label for="longBtn">&nbsp; 6 + miles</label><br>
           </div>
         </li>
         <li><button class="accordion-control">Select Strenuousness</button>
           <div class="accordion-panel">
-              <input type="radio" class="steepness btnClass" name="steepness" value="mild"> Mild<br>
-              <input type="radio" class="steepness btnClass" name="steepness" value="moderate"> Medium <br>
-              <input type="radio" class="steepness btnClass" name="steepness" value="difficult"> Tougher <br>
+              <input type="radio" class="steepness btnClass" name="steepness" id="mildBtn" value="mild"> <label for="mildBtn">&nbsp;Mild</label><br>
+              <input type="radio" class="steepness btnClass" name="steepness" id="modBtn" value="moderate"><label for="modBtn">&nbsp; Medium </label><br>
+              <input type="radio" class="steepness btnClass" name="steepness" id="diffBtn" value="difficult"> <label for="diffBtn">&nbsp;Tougher</label> <br>
           </div>
         </li>
         <li><button class="accordion-control">Weekend?</button>
           <div class="accordion-panel">
-              <input type="radio" class="weekend btnClass" name="busyWeekend" value="yes"> Yes<br>
-              <input type="radio" class="weekend btnClass" name="busyWeekend" value="no"> No<br>
+              <input type="radio" class="weekend btnClass" name="busyWeekend" id="yesWeekend" value="yes"> <label for="yesWeekend">&nbsp;Yes</label><br>
+              <input type="radio" class="weekend btnClass" name="busyWeekend" id="noWeekend" value="no"> <label for="noWeekend">&nbsp;No</label><br>
           </div>
         </li>
 

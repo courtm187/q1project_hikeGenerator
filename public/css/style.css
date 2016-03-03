@@ -232,20 +232,12 @@ a:visited {
   font-size: 30px;
   display: inline; }
 
-#trailName {
-  font-weight: bold; }
-
-#trailLength {
-  font-weight: bold; }
-
-#trailElev {
-  font-weight: bold; }
-
 #aboutPopup {
   position: absolute;
   margin-top: -750px;
   padding: 15px;
   color: white;
+  height: absolute;
   background-color: #ac3973;
   border: 20px solid #800040;
   border-radius: 25px;
