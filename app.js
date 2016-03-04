@@ -30,7 +30,7 @@ $("#resetBtn").on("click", function(){
 //show about popup
 $("#aboutClick").on("click", function(){
   event.stopPropagation();
-  $('#abtPopup').show();
+  $('#aboutPopup').show();
 });
 
 // close dialogue when click outside

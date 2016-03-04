@@ -229,7 +229,7 @@ a:visited {
   font-size: 30px;
   display: inline; }
 
-#abtPopup {
+#aboutPopup {
   position: absolute;
   margin-top: -750px;
   padding: 15px;
@@ -244,24 +244,24 @@ a:visited {
   box-shadow: 7px 7px 3px #888888;
   align-items: center; }
 
-#abtPopup h1 {
+#aboutPopup h1 {
   font-size: 60px;
   margin-top: 25px;
   margin-left: 25px;
   align-items: center; }
 
-#abtPopup a {
+#aboutPopup a {
   color: #e600e6;
   font-size: 30px;
   font-weight: bold;
   text-shadow: 2px 2px #4d4d4d; }
 
-#abtContainer {
+#aboutContainer {
   display: flex;
   flex-direction: row;
   margin-top: 70px; }
 
-.abtSection {
+.aboutSection {
   display: inline-block;
   padding: 10px;
   width: 40%;
@@ -270,7 +270,7 @@ a:visited {
   flex-direction: column;
   flex-grow: 1; }
 
-.abtSection p {
+.aboutSection p {
   font-size: 18px;
   font-weight: bold;
   text-shadow: 2px 2px #4d4d4d; }
@@ -280,7 +280,7 @@ a:visited {
   margin-bottom: 40px;
   flex-grow: 1; }
 
-#abtHeader {
+#aboutHeader {
   margin-top: 20px;
   padding: 10px; }
 
