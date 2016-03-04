@@ -293,6 +293,10 @@ a:visited {
   margin-left: 15px;
   border-radius: 25px; }
 
+#metaDescript {
+  display: none;
+  font-size: 3px; }
+
 @font-face {
   font-family: "Tulia";
   /*a name to be used later*/
