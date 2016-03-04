@@ -19,10 +19,6 @@ body {
   background-image: url("../new_year_background.png");
 }
 
-//@include divs(200px, 200px, 1px solid green);
-//what is this
-// calling a mixin - whatever styling pass these parameters and apply styles
-
 %standardStyle {
   border-radius: 25px;
   padding: 12px;
@@ -37,7 +33,6 @@ body {
   margin: 0px auto;
   align-items: center;
 }
-
 
 header {
   @extend %standardStyle;
@@ -93,7 +88,6 @@ h1{
       justify-content: center;
       flex-direction: column;
       box-shadow: 7px 7px 3px #888888;
-      //float: left;
     }
     #hikeForm{
       text-align: center;
@@ -101,36 +95,25 @@ h1{
       justify-content: center;
     }
 
-    .moveButtons{
-      margin-left: 35% !important;
-      }
 
           .accordion {
             @extend %standardStyle;
             float: left;
-            //background-color: white; //#f2f2f2;
             flex-direction: column;
             display: inline-block;
             color: black;
-          //  flex-direction: row;
-            //float: left;
             margin: 0;
             padding: 0;
             width: 200px;
             margin-bottom: 10px;
-            //border-radius: 25px;
-          //  overflow: auto;
         }
 
           .accordion li {
             float: left;
-            //padding: 4px;
-            margin: 4px; //why not working
+            margin: 4px;
             list-style-type: none;
             background-color: white;
             border-radius: 15px;
-            //display: inline-block;
-            //border: 2px solid black;
             }
             .accordion ul {
               background-color: $lred;
@@ -153,7 +136,6 @@ h1{
            }
 
           .accordion-panel p {
-          //  margin: 20px;
             float: left;
             display: inline-block;
 
@@ -204,7 +186,6 @@ h1{
   display: inline-flex;
   align-items: center;
   justify-content: center;
-
   font-size: 15px;
   float: left;
   box-shadow: 5px 5px 2px #888888;
@@ -230,33 +211,30 @@ h1{
     opacity: 0.75;
   }
 }
+
 #aboutClick p{
   display: inline-flex;
   color: white;
   margin: 0px;
   font-size: 15px;
-
-//   align-items: center;
-//   justify-content: center;
-//   text-align: center;
  }
 
 #leaveNoTrace{
   font-size: 14px;
 }
-a{
-  color: white;
-  text-decoration: none;
-}
-a:hover{
-  text-decoration: none;
-  color: white;
-}
+  a{
+    color: white;
+    text-decoration: none;
+  }
+  a:hover{
+    text-decoration: none;
+    color: white;
+  }
 
-a:visited{
-  text-decoration: none !important;
-  color: white;
-}
+  a:visited{
+    text-decoration: none !important;
+    color: white;
+  }
 
 #resultPopup {
   position: absolute;
@@ -271,37 +249,35 @@ a:visited{
   width: 77%;
   height:95%;
   box-shadow: 7px 7px 3px #888888;
-  // display: none;
-  // display: flex;
-  // flex-direction: row;
-}
-#resultPopup h1{
-  font-size: 60px;
-  margin-top: 25px;
-  margin-left: 25px;
-  align-items: center;
-}
 
-#resultPopup a{
-  color: #e600e6;
-  font-size: 30px;
-  font-weight: bold;
-  text-shadow: 2px 2px #4d4d4d;
 }
-.resultSection {
-  margin-top: 20px;
-  padding: 10px;
-}
-.resultSection p{
-  font-size: 30px;
-  font-weight: bold;
-  text-shadow: 2px 2px #4d4d4d;
-}
+          #resultPopup h1{
+            font-size: 60px;
+            margin-top: 25px;
+            margin-left: 25px;
+            align-items: center;
+          }
 
-.current{
-  font-size: 30px;
-  display:inline;
-}
+          #resultPopup a{
+            color: #ff66d9;
+            font-size: 30px;
+            font-weight: bold;
+            text-shadow: 2px 2px #4d4d4d;
+          }
+          .resultSection {
+            margin-top: 20px;
+            padding: 10px;
+          }
+          .resultSection p{
+            font-size: 30px;
+            font-weight: bold;
+            text-shadow: 2px 2px #4d4d4d;
+          }
+
+          .current{
+            font-size: 30px;
+            display:inline;
+          }
 
 #aboutPopup {
   position: absolute;

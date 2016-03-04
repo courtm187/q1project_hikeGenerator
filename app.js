@@ -42,6 +42,12 @@ $('body').on('click', function(e) {
   }
 })
 
+$('.fa-times-circle').on('click', function() {
+    console.log("close popup");
+    $(".inDialog").hide();
+
+})
+
 //hike function filters array based on form inputs
   var hikeArray = [];
 

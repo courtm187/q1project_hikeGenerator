@@ -18,8 +18,6 @@ $bc: white;
     align-items: center;
     justify-content: center;
     font-size: 16px;
-    //flex-direction: row;
-    //float: left;
   }
   button:focus {outline:0;}
 
@@ -38,16 +36,13 @@ $bc: white;
     border: none;
     border-radius: 10px;
     padding: 5px;
-  //  margin: 5px;
-  margin-top: 4px !important;
+    margin-top: 4px !important;
     flex-direction: column;
     box-shadow: 3px 3px 1px #888888;
     text-align: center;
     align-items: center;
     justify-content: center;
     font-size: 17px;
-    //flex-direction: row;
-    //float: left;
   }
 
 
@@ -58,3 +53,19 @@ $bc: white;
     background-color: darkgray;
   }
 }
+
+#closePopup{
+  background: none;
+  border: none;
+  font-size: 3em;
+  float: right;
+}
+  .fa-times-circle{
+    color: lightgray;
+  }
+
+#closePopup:focus {outline:0;}
+
+.moveButtons{
+  margin-left: 35% !important;
+  }

@@ -70,9 +70,6 @@ h1 {
   align-items: center;
   justify-content: center; }
 
-.moveButtons {
-  margin-left: 35% !important; }
-
 .accordion {
   float: left;
   flex-direction: column;
@@ -214,7 +211,7 @@ a:visited {
   align-items: center; }
 
 #resultPopup a {
-  color: #e600e6;
+  color: #ff66d9;
   font-size: 30px;
   font-weight: bold;
   text-shadow: 2px 2px #4d4d4d; }
@@ -364,3 +361,18 @@ body {
 #hikeForm #resetBtn:hover {
   width: 80px;
   background-color: darkgray; }
+
+#closePopup {
+  background: none;
+  border: none;
+  font-size: 3em;
+  float: right; }
+
+.fa-times-circle {
+  color: lightgray; }
+
+#closePopup:focus {
+  outline: 0; }
+
+.moveButtons {
+  margin-left: 35% !important; }

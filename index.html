@@ -2,11 +2,13 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <meta name="description" content="We'll tell you where to hike in the Denver and Boulder area.">
     <title>Take a Hike!</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <link href='https://fonts.googleapis.com/css?family=Asap|Maven+Pro|Quicksand|Monda|Titillium+Web' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="public/css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.min.js" charset="utf-8"></script>
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
@@ -82,7 +84,7 @@
       </article>
 
       <aside class="imageDiv">
-        <img src="images/24.jpg" alt="kev_map" />
+        <img src="images/24.JPG" alt="kev_map" />
         <aside></aside>
       </aside>
     </div>
@@ -103,6 +105,7 @@
     </footer>
 
     <dialog id="resultPopup" class="inDialog">
+      <button id="closePopup"><i class="fa fa-times-circle"></i></button>
       <span id="hikeHeader"><h1>Your hike suggestion is:</h1></span><br>
       <section class="resultSection">
       <p>Trail Name:  <span id="trailName"> </span></p>
@@ -117,6 +120,7 @@
 
 
     <dialog id="aboutPopup" class="inDialog">
+      <button id="closePopup"><i class="fa fa-times-circle"></i></button>
       <span id="aboutHeader"><h1>About Courtney Morrissey:</h1></span><br>
       <container id="aboutContainer">
       <section class="aboutSection">
